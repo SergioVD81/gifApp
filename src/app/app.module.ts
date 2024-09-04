@@ -1,16 +1,25 @@
-import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
+import { SharedModule } from './shared/shared.module';
+
+
 import { AppComponent } from './app.component';
+import { GiffModule } from './giff/giff.module';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GiffModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

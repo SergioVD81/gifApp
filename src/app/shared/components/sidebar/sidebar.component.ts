@@ -5,15 +5,17 @@ import { GifService } from 'src/app/giff/services/gif.service';
 @Component({
   selector: 'shared-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
-  private gifsService=inject(GifService);
-  public tagHistory:string[]=[]
-  constructor(){}
+  private gifsService = inject(GifService);
 
- get tags(){
-  return this.gifsService.getTagHistory()
- }
+  constructor() {}
 
+  get tags() {
+    return this.gifsService.tagHistory;
+  }
+  showGif(tag: string) {
+    this.gifsService.searchTag(tag);
+  }
 }

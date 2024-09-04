@@ -5,12 +5,12 @@ import { Giff } from '../../interface/gifs.interface';
 @Component({
   selector: 'giff-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-private gifsService=inject(GifService);
+  private gifsService = inject(GifService);
 
-get gifs():Giff[]{
-  return this.gifsService.gifList
-}
+  get gifs(): Giff[] {
+    return this.gifsService.gifList;
+  }
 }

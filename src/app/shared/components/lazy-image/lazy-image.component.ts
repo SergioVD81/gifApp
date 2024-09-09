@@ -13,6 +13,8 @@ export class LazyImageComponent {
     if (!this.urlImage) throw new Error('Url property is required');
   }
   onLoad() {
-    this.hasLoaded = true;
+    setTimeout(() => {
+      this.hasLoaded = true;
+    }, 1000);
   }
 }
